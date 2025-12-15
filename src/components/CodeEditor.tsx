@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
-import { Play, RotateCcw, Copy, Download, Eye } from 'lucide-react';
+import { Play, RotateCcw, Copy, Download, Eye, Loader2 } from 'lucide-react';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 
@@ -115,6 +115,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
   const [language, setLanguage] = useState(initialLanguage);
   const [output, setOutput] = useState<string | null>(null);
   const [isVisualizing, setIsVisualizing] = useState(false);
+  const [isRunning, setIsRunning] = useState(false);
 
   const handleEditorChange = (value: string | undefined) => {
     setCode(value || '');
@@ -161,45 +162,92 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
     link.click();
     document.body.removeChild(link);
   };
-
-  const handleRun = () => {
+async () => {
     if (language === 'html') {
       setIsVisualizing(true);
       return;
     }
 
-    if (language !== 'javascript' && language !== 'typescript') {
-      setOutput(`Execution for ${language} is not supported in the browser yet.`);
+    setIsRunning(true);
+    setOutput(null);
+
+    // Local execution for JS/TS
+    if (language === 'javascript' || language === 'typescript') {
+      try {
+        // Capture console.log output
+        const logs: string[] = [];
+        const originalLog = console.log;
+        
+        console.log = (...args) => {
+          logs.push(args.map(arg => 
+            typeof arg === 'object' ? JSON.stringify(arg, null, 2) : String(arg)
+          ).join(' '));
+        };
+
+        // Execute code safely
+        // Note: eval is used here for demonstration. In production, use a sandboxed environment.
+        // For TS, we're just running it as JS for now since browsers don't execute TS directly.
+        const result = new Function(code)();
+        
+        // Restore console.log
+        console.log = originalLog;
+
+        if (logs.length > 0) {
+          setOutput(logs.join('\n'));
+        } else if (result !== undefined) {
+          setOutput(String(result));
+        } else {
+          setOutput('Code executed successfully (no output)');
+        }
+      } catch (error) {
+        setOutput(`Error: ${error instanceof Error ? error.message : String(error)}`);
+      } finally {
+        setIsRunning(false);
+      }
+      return;
+    }
+
+    // Remote execution via Piston API for other languages
+    const PISTON_API = 'https://emkc.org/api/v2/piston/execute';
+    const LANGUAGE_MAP: Record<string, { language: string; version: string }> = {
+      python: { language: 'python', version: '3.10.0' },
+      java: { language: 'java', version: '15.0.2' },
+      cpp: { language: 'c++', version: '10.2.0' },
+      csharp: { language: 'csharp', version: '6.12.0' },
+      go: { language: 'go', version: '1.16.2' },
+      rust: { language: 'rust', version: '1.68.2' },
+      php: { language: 'php', version: '8.2.3' },
+    };
+
+    const config = LANGUAGE_MAP[language];
+    if (!config) {
+      setOutput(`Execution for ${language} is not supported yet.`);
+      setIsRunning(false);
       return;
     }
 
     try {
-      // Capture console.log output
-      const logs: string[] = [];
-      const originalLog = console.log;
-      
-      console.log = (...args) => {
-        logs.push(args.map(arg => 
-          typeof arg === 'object' ? JSON.stringify(arg, null, 2) : String(arg)
-        ).join(' '));
-      };
+      const response = await fetch(PISTON_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          language: config.language,
+          version: config.version,
+          files: [{ content: code }]
+        })
+      });
 
-      // Execute code safely
-      // Note: eval is used here for demonstration. In production, use a sandboxed environment.
-      // For TS, we're just running it as JS for now since browsers don't execute TS directly.
-      const result = new Function(code)();
+      const data = await response.json();
       
-      // Restore console.log
-      console.log = originalLog;
-
-      if (logs.length > 0) {
-        setOutput(logs.join('\n'));
-      } else if (result !== undefined) {
-        setOutput(String(result));
+      if (data.run) {
+        setOutput(data.run.output || 'Code executed successfully (no output)');
       } else {
-        setOutput('Code executed successfully (no output)');
+        setOutput('Error: Failed to execute code. Service might be unavailable.');
       }
     } catch (error) {
+      setOutput('Error: Failed to connect to execution service. Please check your internet connection.');
+    } finally {
+      setIsRunning(false
       setOutput(`Error: ${error instanceof Error ? error.message : String(error)}`);
     }
   };
@@ -218,10 +266,11 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
             aria-label="Select language"
             value={language}
             onChange={(e) => handleLanguageChange(e.target.value)}
-            className="ml-2 bg-slate-800 text-slate-300 text-xs rounded px-2 py-1 border border-slate-700 focus:outline-none focus:border-blue-500"
+            disabled={isRunning}
+            className="flex items-center space-x-1 px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-400 text-white text-xs font-medium rounded transition-colors"
           >
-            <option value="javascript">JavaScript</option>
-            <option value="typescript">TypeScript</option>
+            {isRunning ? <Loader2 className="w-3 h-3 animate-spin" /> : <Play className="w-3 h-3" />}
+            <span>{isRunning ? 'Running...' : 'Run'}alue="typescript">TypeScript</option>
             <option value="html">HTML/CSS</option>
             <option value="python">Python</option>
             <option value="java">Java</option>
