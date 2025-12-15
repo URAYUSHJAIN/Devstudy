@@ -16,13 +16,13 @@ const Footer = () => {
               Master the skills that matter in production.
             </p>
             <div className="flex space-x-4">
-              <a href="https://github.com/urayushjain" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
+              <a href="https://github.com/urayushjain" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="https://twitter.com/urayushjain" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
+              <a href="https://twitter.com/urayushjain" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="https://linkedin.com/in/urayushjain" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
+              <a href="https://linkedin.com/in/urayushjain" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>

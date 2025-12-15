@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
-import { RotateCcw, Copy, HelpCircle } from 'lucide-react';
+import { RotateCcw, Copy, HelpCircle, Download } from 'lucide-react';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 
@@ -145,16 +145,34 @@ const MermaidEditor = () => {
     setCode(DIAGRAM_TEMPLATES[type]);
   };
 
+  const handleDownload = () => {
+    if (!containerRef.current) return;
+    
+    const svgElement = containerRef.current.querySelector('svg');
+    if (!svgElement) return;
+
+    const svgData = new XMLSerializer().serializeToString(svgElement);
+    const blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `diagram-${Date.now()}.svg`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 h-[600px]">
+    <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4 h-auto lg:h-150">
       {/* Editor Side */}
-      <div className="flex flex-col border border-slate-200 dark:border-slate-800 rounded-lg overflow-hidden bg-slate-950">
+      <div className="flex flex-col border border-slate-200 dark:border-slate-800 rounded-lg overflow-hidden bg-slate-950 h-100 lg:h-full">
         <div className="flex items-center justify-between px-4 py-2 bg-slate-900 border-b border-slate-800">
-          <div className="flex items-center space-x-4">
-            <span className="text-xs text-slate-400 font-mono">diagram.mmd</span>
+          <div className="flex items-center space-x-2 sm:space-x-4">
+            <span className="hidden sm:inline text-xs text-slate-400 font-mono">diagram.mmd</span>
             <select 
               aria-label="Select diagram type"
-              className="bg-slate-800 text-slate-300 text-xs rounded px-2 py-1 border border-slate-700 focus:outline-none focus:border-blue-500"
+              className="bg-slate-800 text-slate-300 text-xs rounded px-2 py-1 border border-slate-700 focus:outline-none focus:border-blue-500 max-w-30 sm:max-w-none"
               onChange={(e) => handleTypeChange(e.target.value as keyof typeof DIAGRAM_TEMPLATES)}
             >
               <option value="flowchart">Flowchart</option>
@@ -227,10 +245,15 @@ const MermaidEditor = () => {
       </div>
 
       {/* Preview Side */}
-      <div className="flex flex-col border border-slate-200 dark:border-slate-800 rounded-lg overflow-hidden bg-white dark:bg-slate-900">
-        <div className="px-4 py-2 bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 flex justify-between items-center">
+      <div className="flex flex-col border border-slate-200 dark:border-slate-800 rounded-lg overflow-hidden bg-white dark:bg-slate-900 h-100 lg:h-full">
+        <div className="px-4 py-2 bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 flex justify-between items-center relative">
           <span className="text-xs text-slate-500 dark:text-slate-400 font-mono">Preview</span>
-          {error && <span className="text-xs text-red-500">{error}</span>}
+          <div className="flex items-center space-x-2">
+             <button onClick={handleDownload} className="p-1.5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white rounded" title="Download SVG">
+              <Download className="w-4 h-4" />
+            </button>
+          </div>
+          {error && <span className="text-xs text-red-500 absolute left-1/2 transform -translate-x-1/2">{error}</span>}
         </div>
         <div className="flex-1 p-4 overflow-auto flex items-center justify-center bg-white dark:bg-slate-900">
           <div ref={containerRef} className="w-full h-full flex items-center justify-center" />

@@ -1,11 +1,7 @@
 'use client';
 
 import React from 'react';
-import dynamic from 'next/dynamic';
-
-const Editor = dynamic(() => import('@monaco-editor/react'), {
-  ssr: false,
-});
+import CodeEditor from '@/components/CodeEditor';
 
 export default function LabsPage() {
   return (
@@ -18,27 +14,8 @@ export default function LabsPage() {
           </p>
         </div>
         
-        <div className="h-[600px] mb-8 border border-slate-200 dark:border-slate-800 rounded-lg overflow-hidden shadow-lg">
-          <Editor 
-            height="100%"
-            defaultLanguage="javascript"
-            theme="vs-dark"
-            defaultValue={`// Welcome to DevStudy Labs
-// Write your JavaScript/TypeScript code here
-
-function calculateFactorial(n) {
-  if (n === 0 || n === 1) return 1;
-  return n * calculateFactorial(n - 1);
-}
-
-console.log(calculateFactorial(5));
-`}
-            options={{
-              minimap: { enabled: false },
-              fontSize: 14,
-              padding: { top: 16 },
-            }}
-          />
+        <div className="h-125 lg:h-150 mb-8 shadow-lg">
+          <CodeEditor />
         </div>
 
         <div className="mt-8 p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg">

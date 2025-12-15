@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Github, Search, Menu, X, User } from 'lucide-react';
+import { Github, Search, Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 
@@ -36,7 +36,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
+          <div className="shrink-0 flex items-center">
             <Link href="/" className="text-xl font-bold tracking-tighter text-slate-900 dark:text-white font-mono flex items-center gap-2">
               <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white">
                 &lt;/&gt;
@@ -80,6 +80,7 @@ const Navbar = () => {
             ) : (
               <button 
                 onClick={() => setIsSearchOpen(true)}
+                aria-label="Search"
                 className="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-white transition-colors"
               >
                 <Search className="w-5 h-5" />
@@ -89,6 +90,7 @@ const Navbar = () => {
               href="https://github.com/urayushjain"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub"
               className="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-white transition-colors"
             >
               <Github className="w-5 h-5" />
@@ -99,6 +101,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button 
               onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
               className="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-white"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -122,8 +125,29 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="pt-4 pb-3 border-t border-slate-200 dark:border-slate-800">
+              <div className="flex items-center px-3 mb-3">
+                <form onSubmit={handleSearch} className="relative w-full">
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search..."
+                    className="w-full px-4 py-2 pl-10 text-sm rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-slate-900 dark:text-white"
+                  />
+                  <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+                </form>
+              </div>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 hover:bg-slate-50 dark:hover:text-white dark:hover:bg-slate-900"
+              >
+                <Github className="w-5 h-5 mr-3" />
+                GitHub
+              </a>
               <button 
-                className="w-full text-left block px-3 py-2 rounded-md text-base font-medium text-indigo-600 dark:text-indigo-400"
+                className="w-full text-left block px-3 py-2 rounded-md text-base font-medium text-indigo-600 dark:text-indigo-400 hover:bg-slate-50 dark:hover:bg-slate-900"
               >
                 Login
               </button>
