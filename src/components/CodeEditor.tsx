@@ -62,6 +62,49 @@ print(greet("Pythonista"))
   </div>
 </body>
 </html>`,
+
+  java: `// Java Playground
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello from Java!");
+    }
+}`,
+
+  cpp: `// C++ Playground
+#include <iostream>
+
+int main() {
+    std::cout << "Hello from C++!" << std::endl;
+    return 0;
+}`,
+
+  csharp: `// C# Playground
+using System;
+
+class Program {
+    static void Main() {
+        Console.WriteLine("Hello from C#!");
+    }
+}`,
+
+  go: `// Go Playground
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello from Go!")
+}`,
+
+  rust: `// Rust Playground
+fn main() {
+    println!("Hello from Rust!");
+}`,
+
+  php: `<?php
+// PHP Playground
+echo "Hello from PHP!";
+?>`,
 };
 
 const CodeEditor: React.FC<CodeEditorProps> = ({ 
@@ -95,11 +138,25 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
   };
 
   const handleDownload = () => {
-    const blob = new Blob([code], { type: 'text/javascript' });
+    const blob = new Blob([code], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = language === 'javascript' ? 'script.js' : 'main.ts';
+    
+    const extensions: Record<string, string> = {
+      javascript: 'js',
+      typescript: 'ts',
+      html: 'html',
+      python: 'py',
+      java: 'java',
+      cpp: 'cpp',
+      csharp: 'cs',
+      go: 'go',
+      rust: 'rs',
+      php: 'php'
+    };
+    
+    link.download = `main.${extensions[language] || 'txt'}`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -167,6 +224,12 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
             <option value="typescript">TypeScript</option>
             <option value="html">HTML/CSS</option>
             <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="cpp">C++</option>
+            <option value="csharp">C#</option>
+            <option value="go">Go</option>
+            <option value="rust">Rust</option>
+            <option value="php">PHP</option>
           </select>
         </div>
         <div className="flex items-center space-x-2">

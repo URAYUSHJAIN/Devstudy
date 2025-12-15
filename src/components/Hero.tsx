@@ -39,7 +39,7 @@ const Hero = () => {
           </div>
 
           {/* Right Content - Code Editor Mockup */}
-          <div className="lg:col-span-6 mt-16 lg:mt-0 relative">
+          <div className="lg:col-span-6 mt-16 lg:mt-0 relative animate-float">
             {/* Floating Stat Card */}
             <div className="absolute -top-12 -right-4 z-10 bg-white dark:bg-slate-800 p-4 rounded-lg shadow-xl border border-slate-100 dark:border-slate-700 hidden md:block animate-fade-in-up">
               <div className="flex items-center gap-3">
