@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DevStudy 🚀
 
-## Getting Started
+A comprehensive, interactive learning platform designed to help developers master engineering skills, system design, and coding through hands-on practice.
 
-First, run the development server:
+## ✨ Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Interactive Coding Labs**: 
+  - **Multi-Language Support**: Write and run code in JavaScript, TypeScript, Python, Java, C++, C#, Go, Rust, and PHP.
+  - **Hybrid Execution Engine**: 
+    - *Web Languages (JS/TS)*: Executed locally in the browser for instant feedback.
+    - *System Languages*: Securely executed remotely via the **Piston API**.
+  - **Live Web Preview**: Real-time HTML/CSS rendering in a sandboxed environment.
+- **System Design Studio**: 
+  - Built-in **Mermaid.js** editor for creating flowcharts, sequence diagrams, and architecture diagrams.
+  - Live preview and SVG export capabilities.
+- **Developer Roadmaps**: Curated learning paths for various engineering roles.
+- **Modern UI/UX**: 
+  - Fully responsive mobile-first design.
+  - Dark/Light mode support.
+  - Clean, distraction-free interface.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Core
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Library**: [React 19](https://react.dev/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Styling & UI
+- **CSS Framework**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Fonts**: Geist Sans & Mono
 
-## Learn More
+### Tools & Libraries
+- **Code Editor**: [@monaco-editor/react](https://github.com/suren-atoyan/monaco-react) (VS Code's editor core)
+- **Diagramming**: [mermaid](https://mermaid.js.org/)
+- **Execution API**: [Piston](https://github.com/engineer-man/piston)
 
-To learn more about Next.js, take a look at the following resources:
+## 📐 Architecture & Methods
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 1. Code Execution Strategy
+The platform uses a **hybrid execution model** to balance performance and capability:
+- **Local Execution**: JavaScript and TypeScript are executed directly in the browser using a safe wrapper around 
+ew Function(). We intercept console.log to display output in the UI.
+- **Remote Execution**: Languages like Python, Java, and C++ are sent to the Piston API. This ensures secure execution of compiled languages without burdening the client.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 2. System Design Visualization
+The **Mermaid Editor** leverages the client-side rendering capabilities of Mermaid.js. It parses text definitions in real-time to generate SVG diagrams, allowing users to visualize complex systems instantly.
 
-## Deploy on Vercel
+### 3. Component Structure
+- **Modular Design**: Components like CodeEditor and MermaidEditor are self-contained with their own state management and error handling.
+- **Responsive Layouts**: Utilizes Tailwind's grid and flexbox systems to ensure usability across desktop and mobile devices.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Getting Started
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repository**
+   `ash
+   git clone https://github.com/URAYUSHJAIN/Devstudy.git
+   cd Devstudy
+   `
+
+2. **Install dependencies**
+   `ash
+   npm install
+   # or
+   bun install
+   `
+
+3. **Run the development server**
+   `ash
+   npm run dev
+   `
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
