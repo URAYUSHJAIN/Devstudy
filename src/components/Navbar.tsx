@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Github, Search, Menu, X, User } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { useSession } from 'next-auth/react';
+import { useSession, signIn } from 'next-auth/react';
 
 const Navbar = () => {
   const { data: session } = useSession();
@@ -97,7 +97,7 @@ const Navbar = () => {
             >
               <Github className="w-5 h-5" />
             </a>
-            {session && (
+            {session ? (
               <Link
                 href="/profile"
                 aria-label="Profile"
@@ -105,6 +105,13 @@ const Navbar = () => {
               >
                 <User className="w-5 h-5" />
               </Link>
+            ) : (
+              <button
+                onClick={() => signIn('github')}
+                className="px-4 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors"
+              >
+                Sign In
+              </button>
             )}
           </div>
 
@@ -157,11 +164,23 @@ const Navbar = () => {
                 <Github className="w-5 h-5 mr-3" />
                 GitHub
               </a>
-              <button 
-                className="w-full text-left block px-3 py-2 rounded-md text-base font-medium text-indigo-600 dark:text-indigo-400 hover:bg-slate-50 dark:hover:bg-slate-900"
-              >
-                Login
-              </button>
+              {session ? (
+                <Link
+                  href="/profile"
+                  className="flex items-center px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 hover:bg-slate-50 dark:hover:text-white dark:hover:bg-slate-900"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <User className="w-5 h-5 mr-3" />
+                  Profile
+                </Link>
+              ) : (
+                <button 
+                  onClick={() => signIn('github')}
+                  className="w-full text-left block px-3 py-2 rounded-md text-base font-medium text-indigo-600 dark:text-indigo-400 hover:bg-slate-50 dark:hover:bg-slate-900"
+                >
+                  Sign In
+                </button>
+              )}
             </div>
           </div>
         </div>
