@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
-import { RotateCcw, Copy, HelpCircle, Download } from 'lucide-react';
+import { useSession, signIn } from 'next-auth/react';
+import { RotateCcw, Copy, HelpCircle, Download, Github, Loader2 } from 'lucide-react';
 
 const Editor = dynamic(() => import('@monaco-editor/react'), { ssr: false });
 
@@ -81,7 +82,9 @@ const DIAGRAM_TEMPLATES = {
 };
 
 const MermaidEditor = () => {
+  const { data: session } = useSession();
   const [code, setCode] = useState(DIAGRAM_TEMPLATES.flowchart);
+  const [isSyncing, setIsSyncing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [showHelp, setShowHelp] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -163,6 +166,39 @@ const MermaidEditor = () => {
     document.body.removeChild(link);
   };
 
+  const handleSyncToGithub = async () => {
+    if (!session) {
+      signIn('github');
+      return;
+    }
+
+    setIsSyncing(true);
+    try {
+      const fileName = `diagram-${Date.now()}`;
+      const response = await fetch('/api/github/sync', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          content: code,
+          fileName,
+          type: 'md' // Defaulting to MD for now as it's safer
+        })
+      });
+
+      const data = await response.json();
+      if (data.url) {
+        alert(`Successfully synced to GitHub! View at: ${data.url}`);
+        window.open(data.url, '_blank');
+      } else {
+        throw new Error(data.error || 'Failed to sync');
+      }
+    } catch (error: any) {
+      alert(`Sync failed: ${error.message}`);
+    } finally {
+      setIsSyncing(false);
+    }
+  };
+
   return (
     <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4 h-auto lg:h-150">
       {/* Editor Side */}
@@ -197,6 +233,14 @@ const MermaidEditor = () => {
             </button>
             <button onClick={handleCopy} className="p-1.5 text-slate-400 hover:text-white rounded" title="Copy Code">
               <Copy className="w-4 h-4" />
+            </button>
+            <button 
+              onClick={handleSyncToGithub} 
+              disabled={isSyncing}
+              className="p-1.5 text-slate-400 hover:text-white rounded flex items-center gap-1" 
+              title={session ? "Sync to GitHub" : "Sign in to Sync"}
+            >
+              {isSyncing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Github className="w-4 h-4" />}
             </button>
           </div>
         </div>

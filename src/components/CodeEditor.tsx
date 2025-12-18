@@ -162,7 +162,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
     link.click();
     document.body.removeChild(link);
   };
-async () => {
+  const handleRun = async () => {
     if (language === 'html') {
       setIsVisualizing(true);
       return;
@@ -207,8 +207,8 @@ async () => {
       return;
     }
 
-    // Remote execution via Piston API for other languages
-    const PISTON_API = 'https://emkc.org/api/v2/piston/execute';
+    // Remote execution via internal API (proxies to Piston)
+    const API_URL = '/api/code/execute';
     const LANGUAGE_MAP: Record<string, { language: string; version: string }> = {
       python: { language: 'python', version: '3.10.0' },
       java: { language: 'java', version: '15.0.2' },
@@ -227,13 +227,13 @@ async () => {
     }
 
     try {
-      const response = await fetch(PISTON_API, {
+      const response = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           language: config.language,
           version: config.version,
-          files: [{ content: code }]
+          content: code
         })
       });
 
@@ -241,14 +241,15 @@ async () => {
       
       if (data.run) {
         setOutput(data.run.output || 'Code executed successfully (no output)');
+      } else if (data.error) {
+        setOutput(`Error: ${data.error}`);
       } else {
         setOutput('Error: Failed to execute code. Service might be unavailable.');
       }
     } catch (error) {
       setOutput('Error: Failed to connect to execution service. Please check your internet connection.');
     } finally {
-      setIsRunning(false
-      setOutput(`Error: ${error instanceof Error ? error.message : String(error)}`);
+      setIsRunning(false);
     }
   };
 
@@ -266,11 +267,10 @@ async () => {
             aria-label="Select language"
             value={language}
             onChange={(e) => handleLanguageChange(e.target.value)}
-            disabled={isRunning}
-            className="flex items-center space-x-1 px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-400 text-white text-xs font-medium rounded transition-colors"
+            className="ml-2 bg-slate-800 text-slate-300 text-xs rounded px-2 py-1 border border-slate-700 focus:outline-none focus:border-blue-500"
           >
-            {isRunning ? <Loader2 className="w-3 h-3 animate-spin" /> : <Play className="w-3 h-3" />}
-            <span>{isRunning ? 'Running...' : 'Run'}alue="typescript">TypeScript</option>
+            <option value="javascript">JavaScript</option>
+            <option value="typescript">TypeScript</option>
             <option value="html">HTML/CSS</option>
             <option value="python">Python</option>
             <option value="java">Java</option>
@@ -314,10 +314,11 @@ async () => {
           )}
           <button 
             onClick={handleRun}
-            className="flex items-center space-x-1 px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-medium rounded transition-colors"
+            disabled={isRunning}
+            className="flex items-center space-x-1 px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-400 text-white text-xs font-medium rounded transition-colors"
           >
-            <Play className="w-3 h-3" />
-            <span>Run</span>
+            {isRunning ? <Loader2 className="w-3 h-3 animate-spin" /> : <Play className="w-3 h-3" />}
+            <span>{isRunning ? 'Running...' : 'Run'}</span>
           </button>
         </div>
       </div>

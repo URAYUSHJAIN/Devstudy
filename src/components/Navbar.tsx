@@ -1,11 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Github, Search, Menu, X } from 'lucide-react';
+import { Github, Search, Menu, X, User } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
+import { useSession } from 'next-auth/react';
 
 const Navbar = () => {
+  const { data: session } = useSession();
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -95,6 +97,15 @@ const Navbar = () => {
             >
               <Github className="w-5 h-5" />
             </a>
+            {session && (
+              <Link
+                href="/profile"
+                aria-label="Profile"
+                className="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-white transition-colors"
+              >
+                <User className="w-5 h-5" />
+              </Link>
+            )}
           </div>
 
           {/* Mobile menu button */}
