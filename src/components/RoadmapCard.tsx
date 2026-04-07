@@ -28,20 +28,22 @@ const RoadmapCard: React.FC<RoadmapProps> = ({ roadmap }) => {
       href={roadmap.url} 
       target="_blank" 
       rel="noopener noreferrer"
-      className="group block p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-indigo-500 dark:hover:border-indigo-500 hover:shadow-md transition-all"
+      data-interactive-card="true"
+      className="group relative block p-6 bg-[rgba(255,255,255,0.72)] border border-[rgba(113,201,206,0.28)] rounded-2xl hover:border-(--c4) hover:-translate-y-0.75 hover:shadow-[0_12px_32px_rgba(113,201,206,0.15)]"
     >
+      <div className="absolute top-0 left-0 h-0.5 w-full origin-left scale-x-0 group-hover:scale-x-100 bg-[linear-gradient(90deg,var(--c3),var(--c4))] transition-transform duration-300" />
       <div className="flex items-start justify-between mb-4">
-        <div className="p-3 bg-indigo-50 dark:bg-indigo-900/20 rounded-lg group-hover:bg-indigo-100 dark:group-hover:bg-indigo-900/40 transition-colors">
-          <Icon className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
+        <div data-icon-wrapper="true" className="p-3 bg-(--c2) rounded-xl group-hover:bg-(--c3) group-hover:rotate-[-4deg] group-hover:scale-[1.08]">
+          <Icon className="w-6 h-6 text-(--c4d)" />
         </div>
-        <ArrowRight className="w-5 h-5 text-slate-300 group-hover:text-indigo-500 transition-colors -rotate-45 group-hover:rotate-0 transform duration-300" />
+        <ArrowRight className="w-5 h-5 text-(--c4) group-hover:text-(--c4d) transition-colors -rotate-45 group-hover:rotate-0 transform duration-300" />
       </div>
       
-      <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+      <h3 className="text-xl font-bold text-(--ink) mb-2 group-hover:text-(--c4d) transition-colors tracking-[-0.8px]">
         {roadmap.title}
       </h3>
       
-      <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+      <p className="text-(--muted) text-sm leading-relaxed">
         {roadmap.description}
       </p>
     </a>

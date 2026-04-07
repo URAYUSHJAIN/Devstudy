@@ -1,28 +1,74 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --c1: #E3FDFD;
+  --c2: #CBF1F5;
+  --c3: #A6E3E9;
+  --c4: #71C9CE;
+  --c4d: #4AABB1;
+  --ink: #0D2B2C;
+  --ink2: #1C4A4C;
+  --muted: #4A7A7C;
+  --background: var(--c1);
+  --foreground: var(--ink);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-plus-jakarta-sans);
+  --font-mono: var(--font-dm-mono);
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--muted);
+  font-family: var(--font-plus-jakarta-sans), sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+h1,
+h2 {
+  letter-spacing: -1.2px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.8px;
+}
+
+code,
+pre,
+.font-mono {
+  font-family: var(--font-dm-mono), monospace;
+}
+
+[data-interactive-card='true'] {
+  transition: border-color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
+}
+
+button,
+[role='button'],
+a.inline-flex,
+a.button-like {
+  transition: transform 150ms cubic-bezier(.34, 1.56, .64, 1), box-shadow 150ms ease;
+}
+
+[data-icon-wrapper='true'] {
+  transition: background 200ms ease, transform 200ms ease;
 }
 
 @keyframes fadeInUp {
@@ -54,4 +100,23 @@ body {
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.6;
+  }
+  70% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.85);
+    opacity: 0.6;
+  }
+}
+
+.animate-pulse-dot {
+  animation: pulseDot 1.8s ease-in-out infinite;
 }

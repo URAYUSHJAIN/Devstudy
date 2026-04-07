@@ -4,86 +4,102 @@ import { ArrowRight, Terminal, Code2, Cpu, Globe, Database } from 'lucide-react'
 
 const Hero = () => {
   return (
-    <section className="relative bg-white dark:bg-slate-950 pt-16 pb-24 overflow-hidden">
+    <section className="relative pt-16 pb-24 overflow-hidden bg-[linear-gradient(160deg,var(--c1),#f0fefe_40%,var(--c2))]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
           
           {/* Left Content */}
           <div className="lg:col-span-6 text-center lg:text-left">
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 mb-6">
-              <span className="text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wide">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-(--c2) border border-(--c3) mb-6">
+              <span className="w-2 h-2 rounded-full bg-(--c4) animate-pulse-dot" />
+              <span className="text-xs font-semibold text-(--ink) uppercase tracking-[0.06em]">
                 Trusted by 100K+ Engineers
               </span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6 leading-tight">
+            <h1 className="text-[48px] sm:text-[48px] lg:text-[48px] font-bold text-(--ink) tracking-[-1.5px] mb-6 leading-[1.08]">
               Build Real-World <br className="hidden lg:block" />
-              <span className="text-indigo-600 dark:text-indigo-400">Engineering Skills</span> <br className="hidden lg:block" />
+              <span className="text-(--c4d)">Engineering Skills</span> <br className="hidden lg:block" />
               That Actually Ship
             </h1>
             
-            <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-[16px] text-(--muted) mb-8 max-w-2xl mx-auto lg:mx-0 leading-[1.65]">
               Project-driven courses, system design, and AI-assisted learning for developers. 
               Stop watching tutorials. Start shipping code.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <Link href="/labs" className="w-full sm:w-auto px-8 py-4 bg-slate-900 hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200 text-white font-semibold rounded-lg transition-all flex items-center justify-center gap-2">
+              <Link href="/labs" className="w-full sm:w-auto px-8 py-4 bg-(--ink) text-(--c1) font-semibold rounded-xl hover:-translate-y-0.5 flex items-center justify-center gap-2 transition-[transform,box-shadow] duration-150 ease-[cubic-bezier(.34,1.56,.64,1)] shadow-[0_8px_20px_rgba(13,43,44,0.12)]">
                 Start Coding
                 <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link href="/roadmaps" className="w-full sm:w-auto px-8 py-4 bg-white hover:bg-slate-50 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 font-semibold rounded-lg transition-all flex items-center justify-center">
+              <Link href="/roadmaps" className="w-full sm:w-auto px-8 py-4 border-[1.5px] border-(--c3) hover:bg-(--c2) text-(--ink) font-semibold rounded-xl transition-colors flex items-center justify-center">
                 View Roadmaps
               </Link>
+            </div>
+
+            <div className="mt-8 pt-4 border-t border-(--c3) grid grid-cols-3 gap-4 max-w-xl mx-auto lg:mx-0">
+              <div>
+                <p className="text-[28px] font-bold text-(--ink) tracking-[-1px]">100K+</p>
+                <p className="text-[12px] uppercase tracking-[0.06em] text-(--muted)">Engineers</p>
+              </div>
+              <div>
+                <p className="text-[28px] font-bold text-(--ink) tracking-[-1px]">120+</p>
+                <p className="text-[12px] uppercase tracking-[0.06em] text-(--muted)">Projects</p>
+              </div>
+              <div>
+                <p className="text-[28px] font-bold text-(--ink) tracking-[-1px]">24/7</p>
+                <p className="text-[12px] uppercase tracking-[0.06em] text-(--muted)">Lab Access</p>
+              </div>
             </div>
           </div>
 
           {/* Right Content - Code Editor Mockup */}
           <div className="lg:col-span-6 mt-16 lg:mt-0 relative animate-float">
             {/* Floating Stat Card */}
-            <div className="absolute -top-12 -right-4 z-10 bg-white dark:bg-slate-800 p-4 rounded-lg shadow-xl border border-slate-100 dark:border-slate-700 hidden md:block animate-fade-in-up">
+            <div className="absolute -top-12 -right-4 z-10 bg-white/80 p-4 rounded-xl shadow-xl border border-(--c3) hidden md:block animate-fade-in-up backdrop-blur-sm">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-full">
-                  <Terminal className="w-5 h-5 text-green-600 dark:text-green-400" />
+                <div className="p-2 bg-(--c2) rounded-full">
+                  <Terminal className="w-5 h-5 text-(--c4d)" />
                 </div>
                 <div>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Active Engineers</p>
-                  <p className="text-lg font-bold text-slate-900 dark:text-white">100,000+</p>
+                  <p className="text-xs text-(--muted) font-medium">Active Engineers</p>
+                  <p className="text-lg font-bold text-(--ink)">100,000+</p>
                 </div>
               </div>
             </div>
 
-            <div className="relative rounded-xl bg-slate-900 shadow-2xl border border-slate-800 overflow-hidden">
+            <div className="relative rounded-2xl bg-(--ink) shadow-2xl border border-(--c4d) overflow-hidden">
               {/* Editor Header */}
-              <div className="flex items-center px-4 py-3 bg-slate-800 border-b border-slate-700">
+              <div className="flex items-center px-4 py-3 bg-[#12393b] border-b border-(--c4d)">
                 <div className="flex space-x-2">
                   <div className="w-3 h-3 rounded-full bg-red-500"></div>
                   <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 </div>
-                <div className="ml-4 text-xs text-slate-400 font-mono">server.ts</div>
+                <div className="ml-4 text-xs text-(--c3) font-mono">server.ts</div>
               </div>
               
               {/* Editor Content */}
               <div className="p-6 overflow-x-auto">
                 <pre className="font-mono text-sm leading-relaxed">
-                  <code className="text-slate-300">
-                    <span className="text-purple-400">import</span> {'{'} NextApiRequest, NextApiResponse {'}'} <span className="text-purple-400">from</span> <span className="text-green-400">'next'</span>;<br/>
+                  <code className="text-[#cbeef1]">
+                    <span className="text-[#8ad9de]">import</span> {'{'} NextApiRequest, NextApiResponse {'}'} <span className="text-[#8ad9de]">from</span> <span className="text-[#9df0cf]">'next'</span>;<br/>
                     <br/>
-                    <span className="text-purple-400">export default async function</span> <span className="text-blue-400">handler</span>(<br/>
-                    &nbsp;&nbsp;req: <span className="text-yellow-400">NextApiRequest</span>,<br/>
-                    &nbsp;&nbsp;res: <span className="text-yellow-400">NextApiResponse</span><br/>
+                    <span className="text-[#8ad9de]">export default async function</span> <span className="text-[#78c9ff]">handler</span>(<br/>
+                    &nbsp;&nbsp;req: <span className="text-[#f5da97]">NextApiRequest</span>,<br/>
+                    &nbsp;&nbsp;res: <span className="text-[#f5da97]">NextApiResponse</span><br/>
                     ) {'{'}<br/>
-                    &nbsp;&nbsp;<span className="text-purple-400">const</span> {'{'} method {'}'} = req;<br/>
+                    &nbsp;&nbsp;<span className="text-[#8ad9de]">const</span> {'{'} method {'}'} = req;<br/>
                     <br/>
-                    &nbsp;&nbsp;<span className="text-purple-400">switch</span> (method) {'{'}<br/>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-purple-400">case</span> <span className="text-green-400">'GET'</span>:<br/>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-slate-500">// Fetch engineering data</span><br/>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res.<span className="text-blue-400">status</span>(200).<span className="text-blue-400">json</span>({'{'} message: <span className="text-green-400">'Hello Dev!'</span> {'}'});<br/>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-purple-400">break</span>;<br/>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-purple-400">default</span>:<br/>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res.<span className="text-blue-400">setHeader</span>(<span className="text-green-400">'Allow'</span>, [<span className="text-green-400">'GET'</span>]);<br/>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res.<span className="text-blue-400">status</span>(405).<span className="text-blue-400">end</span>(<span className="text-green-400">`Method ${'{'}method{'}'} Not Allowed`</span>);<br/>
+                    &nbsp;&nbsp;<span className="text-[#8ad9de]">switch</span> (method) {'{'}<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-[#8ad9de]">case</span> <span className="text-[#9df0cf]">'GET'</span>:<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-[#6fa8ac]">// Fetch engineering data</span><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res.<span className="text-[#78c9ff]">status</span>(200).<span className="text-[#78c9ff]">json</span>({'{'} message: <span className="text-[#9df0cf]">'Hello Dev!'</span> {'}'});<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-[#8ad9de]">break</span>;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-[#8ad9de]">default</span>:<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res.<span className="text-[#78c9ff]">setHeader</span>(<span className="text-[#9df0cf]">'Allow'</span>, [<span className="text-[#9df0cf]">'GET'</span>]);<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res.<span className="text-[#78c9ff]">status</span>(405).<span className="text-[#78c9ff]">end</span>(<span className="text-[#9df0cf]">`Method ${'{'}method{'}'} Not Allowed`</span>);<br/>
                     &nbsp;&nbsp;{'}'}<br/>
                     {'}'}
                   </code>

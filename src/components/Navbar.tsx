@@ -34,13 +34,13 @@ const Navbar = () => {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+    <nav className="sticky top-0 z-50 w-full bg-(--c1)/90 backdrop-blur-md border-b border-(--c3)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="shrink-0 flex items-center">
-            <Link href="/" className="text-xl font-bold tracking-tighter text-slate-900 dark:text-white font-mono flex items-center gap-2">
-              <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white">
+            <Link href="/" className="text-xl font-bold tracking-[-1px] text-(--ink) font-mono flex items-center gap-2">
+              <div className="w-8 h-8 bg-(--ink) rounded-lg flex items-center justify-center text-(--c1)">
                 &lt;/&gt;
               </div>
               DEVSTUDY
@@ -48,15 +48,15 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium transition-colors ${
+                className={`px-3 py-2 text-sm font-medium rounded-lg transition-all duration-150 ${
                   isActive(item.href)
-                    ? 'text-indigo-600 dark:text-indigo-400'
-                    : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'
+                    ? 'text-(--ink) bg-(--c2)'
+                    : 'text-(--muted) hover:text-(--ink) hover:bg-(--c2)'
                 }`}
               >
                 {item.name}
@@ -65,7 +65,7 @@ const Navbar = () => {
           </div>
 
           {/* Right Side Actions */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center gap-4">
             {isSearchOpen ? (
               <form onSubmit={handleSearch} className="relative">
                 <input
@@ -73,17 +73,17 @@ const Navbar = () => {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search..."
-                  className="w-64 px-4 py-1 pl-10 text-sm rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-slate-900 dark:text-white"
+                  className="w-64 px-4 py-2 pl-10 text-sm rounded-full border border-(--c3) bg-(--c1) focus:outline-none focus:ring-2 focus:ring-(--c4) text-(--ink)"
                   autoFocus
                   onBlur={() => !searchQuery && setIsSearchOpen(false)}
                 />
-                <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+                <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-(--muted)" />
               </form>
             ) : (
               <button 
                 onClick={() => setIsSearchOpen(true)}
                 aria-label="Search"
-                className="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-white transition-colors"
+                className="p-2 text-(--muted) hover:text-(--ink) transition-colors"
               >
                 <Search className="w-5 h-5" />
               </button>
@@ -93,7 +93,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-white transition-colors"
+              className="p-2 text-(--muted) hover:text-(--ink) transition-colors"
             >
               <Github className="w-5 h-5" />
             </a>
@@ -101,14 +101,14 @@ const Navbar = () => {
               <Link
                 href="/profile"
                 aria-label="Profile"
-                className="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-white transition-colors"
+                className="p-2 text-(--muted) hover:text-(--ink) transition-colors"
               >
                 <User className="w-5 h-5" />
               </Link>
             ) : (
               <button
                 onClick={() => signIn('github')}
-                className="px-4 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors"
+                className="px-4 py-2 text-sm font-medium bg-(--ink) text-(--c1) rounded-lg hover:-translate-y-px"
               >
                 Sign In
               </button>
@@ -120,7 +120,7 @@ const Navbar = () => {
             <button 
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
-              className="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-white"
+              className="p-2 text-(--muted) hover:text-(--ink)"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -130,36 +130,36 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="md:hidden bg-(--c1) border-b border-(--c3)">
+          <div className="px-4 pt-4 pb-8 space-y-4 sm:px-4">
             {navLinks.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 hover:bg-slate-50 dark:hover:text-white dark:hover:bg-slate-900"
+                className="block px-4 py-2 rounded-lg text-base font-medium text-(--muted) hover:text-(--ink) hover:bg-(--c2)"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
-            <div className="pt-4 pb-3 border-t border-slate-200 dark:border-slate-800">
-              <div className="flex items-center px-3 mb-3">
+            <div className="pt-4 pb-4 border-t border-(--c3)">
+              <div className="flex items-center mb-4">
                 <form onSubmit={handleSearch} className="relative w-full">
                   <input
                     type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search..."
-                    className="w-full px-4 py-2 pl-10 text-sm rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-slate-900 dark:text-white"
+                    className="w-full px-4 py-2 pl-10 text-sm rounded-lg border border-(--c3) bg-(--c1) focus:outline-none focus:ring-2 focus:ring-(--c4) text-(--ink)"
                   />
-                  <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+                  <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-(--muted)" />
                 </form>
               </div>
               <a
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 hover:bg-slate-50 dark:hover:text-white dark:hover:bg-slate-900"
+                className="flex items-center px-4 py-2 rounded-lg text-base font-medium text-(--muted) hover:text-(--ink) hover:bg-(--c2)"
               >
                 <Github className="w-5 h-5 mr-3" />
                 GitHub
@@ -167,7 +167,7 @@ const Navbar = () => {
               {session ? (
                 <Link
                   href="/profile"
-                  className="flex items-center px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 hover:bg-slate-50 dark:hover:text-white dark:hover:bg-slate-900"
+                  className="flex items-center px-4 py-2 rounded-lg text-base font-medium text-(--muted) hover:text-(--ink) hover:bg-(--c2)"
                   onClick={() => setIsOpen(false)}
                 >
                   <User className="w-5 h-5 mr-3" />
@@ -176,7 +176,7 @@ const Navbar = () => {
               ) : (
                 <button 
                   onClick={() => signIn('github')}
-                  className="w-full text-left block px-3 py-2 rounded-md text-base font-medium text-indigo-600 dark:text-indigo-400 hover:bg-slate-50 dark:hover:bg-slate-900"
+                  className="w-full text-left block px-4 py-2 rounded-lg text-base font-medium bg-(--ink) text-(--c1) hover:-translate-y-px"
                 >
                   Sign In
                 </button>

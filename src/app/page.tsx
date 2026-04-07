@@ -6,7 +6,7 @@ import CoursesGrid from '@/components/CoursesGrid';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white dark:bg-slate-950 selection:bg-indigo-500/30">
+    <main className="min-h-screen bg-(--c1) selection:bg-(--c4)/30">
       <AnnouncementBar />
       <Hero />
       <AboutSection />

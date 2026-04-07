@@ -1,5 +1,7 @@
 import React from 'react';
-import { Bookmark, Star, Users, Layers } from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Bookmark, Users, Layers } from 'lucide-react';
 
 const courses = [
   {
@@ -50,51 +52,56 @@ const courses = [
 
 const CoursesGrid = () => {
   return (
-    <section className="py-20 bg-slate-50 dark:bg-slate-900/30">
+    <section className="py-20 bg-(--c1)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-end mb-10">
           <div>
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">
+            <h2 className="text-3xl font-bold text-(--ink) tracking-[-1px] mb-2">
               Popular Engineering Courses
             </h2>
-            <p className="text-slate-600 dark:text-slate-400">
+            <p className="text-(--muted)">
               Master the latest technologies with hands-on projects.
             </p>
           </div>
-          <a href="/courses" className="text-indigo-600 dark:text-indigo-400 font-medium hover:underline hidden sm:block">
+          <a href="/courses" className="text-(--c4d) font-medium hover:underline hidden sm:block">
             View all courses
           </a>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {courses.map((course) => (
-            <div 
+            <Link
+              href="/courses"
+              data-interactive-card="true"
               key={course.id}
-              className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow group"
+              className="relative block bg-[rgba(255,255,255,0.72)] rounded-lg border border-[rgba(113,201,206,0.32)] overflow-hidden group hover:border-(--c4) hover:-translate-y-0.75 hover:shadow-[0_12px_32px_rgba(113,201,206,0.15)]"
             >
+              <div className="absolute top-0 left-0 h-0.5 w-full origin-left scale-x-0 group-hover:scale-x-100 bg-[linear-gradient(90deg,var(--c3),var(--c4))] transition-transform duration-300" />
               {/* Card Header / Thumbnail Placeholder */}
-              <div className="h-32 bg-slate-100 dark:bg-slate-800 relative p-4 flex flex-col justify-between overflow-hidden">
+              <div className="h-40 bg-[linear-gradient(135deg,var(--c2),var(--c3))] relative p-4 flex flex-col justify-between overflow-hidden">
                 {/* Video Thumbnail Background */}
-                <img 
+                <Image
                   src={`https://img.youtube.com/vi/${course.videoId}/hqdefault.jpg`} 
                   alt={course.title} 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-400 group-hover:scale-[1.06]"
                 />
-                <div className="absolute inset-0 bg-black/60 transition-colors group-hover:bg-black/50" />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.45),rgba(0,0,0,0.65))] transition-opacity group-hover:opacity-90" />
 
                 <div className="relative z-10 flex justify-between items-start">
-                  <span className="px-2 py-1 text-xs font-semibold bg-white/90 dark:bg-slate-900/90 text-slate-700 dark:text-slate-300 rounded backdrop-blur-sm">
+                  <span className="px-3 py-1 text-[12px] font-semibold bg-[rgba(227,253,253,0.95)] text-(--ink2) rounded-md backdrop-blur-sm">
                     {course.tech}
                   </span>
-                  <button className="text-white/70 hover:text-white transition-colors">
+                  <span className="p-2 rounded-md border border-white/20 bg-black/20 text-white/80 group-hover:text-white transition-colors">
                     <Bookmark className="w-5 h-5" />
-                  </button>
+                  </span>
                 </div>
-                <div className="relative z-10 flex items-center space-x-2 text-xs text-white/90">
-                  <span className={`px-2 py-0.5 rounded-full border ${
+                <div className="relative z-10 flex items-center gap-2 text-xs text-white/95">
+                  <span className={`px-2 py-1 rounded-md border ${
                     course.type === 'Free' 
-                      ? 'border-green-400/30 bg-green-500/20 text-green-100' 
-                      : 'border-indigo-400/30 bg-indigo-500/20 text-indigo-100'
+                      ? 'bg-[rgba(113,201,206,0.25)] text-[#e8ffff] border-[rgba(113,201,206,0.45)]' 
+                      : 'bg-[rgba(13,43,44,0.25)] text-white border-[rgba(13,43,44,0.35)]'
                   }`}>
                     {course.type}
                   </span>
@@ -105,30 +112,30 @@ const CoursesGrid = () => {
 
               {/* Card Body */}
               <div className="p-5">
-                <h3 className="font-bold text-slate-900 dark:text-white mb-2 line-clamp-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                <h3 className="text-xl leading-[1.3] font-bold text-(--ink) mb-2 line-clamp-2 group-hover:text-(--c4d) transition-colors">
                   {course.title}
                 </h3>
-                <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">
-                  by <span className="text-slate-700 dark:text-slate-300 font-medium">{course.instructor}</span>
+                <p className="text-sm text-(--muted) mb-4">
+                  by <span className="text-(--ink2) font-medium">{course.instructor}</span>
                 </p>
 
-                <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800">
-                  <div className="flex items-center text-xs text-slate-500 dark:text-slate-400">
+                <div className="flex items-center justify-between pt-4 border-t border-[rgba(113,201,206,0.28)]">
+                  <div className="flex items-center text-xs text-(--muted)">
                     <Layers className="w-4 h-4 mr-1" />
                     {course.projects} Projects
                   </div>
-                  <div className="flex items-center text-xs text-slate-500 dark:text-slate-400">
+                  <div className="flex items-center text-xs text-(--muted)">
                     <Users className="w-4 h-4 mr-1" />
                     {course.students}
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         
         <div className="mt-8 text-center sm:hidden">
-          <a href="#" className="text-indigo-600 dark:text-indigo-400 font-medium hover:underline">
+          <a href="#" className="text-(--c4d) font-medium hover:underline">
             View all courses
           </a>
         </div>
