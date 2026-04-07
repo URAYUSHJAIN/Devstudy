@@ -85,7 +85,22 @@ The **Mermaid Editor** leverages the client-side rendering capabilities of Merma
   - local example: `http://localhost:3001`
   - production example: `https://battle.your-app.com`
 
-### 2. Socket server deployment
+### 2. GitHub OAuth callback URL (important)
+
+If you see this error on login:
+
+- `The redirect_uri is not associated with this application`
+
+then your GitHub OAuth App callback does not match your app URL.
+
+In GitHub OAuth App settings, set **Authorization callback URL** to exactly:
+
+- local: `http://localhost:3000/api/auth/callback/github`
+- production: `https://your-app.com/api/auth/callback/github`
+
+Also make sure `NEXTAUTH_URL` uses the same origin (`http/https`, domain, and port).
+
+### 3. Socket server deployment
 
 Run the battle socket server as a separate long-running process:
 
@@ -97,7 +112,7 @@ Set this on the socket server environment:
 
 - `CLIENT_ORIGIN` = your web app origin (example: `https://your-app.com`)
 
-### 3. Battle mode behavior
+### 4. Battle mode behavior
 
 - Battle page requires GitHub sign-in.
 - Lobby now shows who is available to fight in real-time.
