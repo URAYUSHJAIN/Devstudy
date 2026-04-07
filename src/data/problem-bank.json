@@ -1,0 +1,1227 @@
+[
+  {
+    "id": "PB001",
+    "title": "Practice Arrays Problem 1",
+    "description": "Build an algorithm to count valid patterns in a arrays setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=2 => Output: 3"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB002",
+    "title": "Practice Stacks Problem 2",
+    "description": "Build an algorithm to simulate process in a stacks setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=3 => Output: 4"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB003",
+    "title": "Practice Sorting Problem 3",
+    "description": "Build an algorithm to rearrange values in a sorting setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=4 => Output: 5"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB004",
+    "title": "Practice Dynamic programming Problem 4",
+    "description": "Build an algorithm to maximize score in a dynamic programming setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=5 => Output: 7",
+      "Example 2: Input: data=[...], q=6 => Output: 9"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB005",
+    "title": "Practice Number theory Problem 5",
+    "description": "Build an algorithm to track running state in a number theory setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=6 => Output: 7"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB006",
+    "title": "Practice Sliding window Problem 6",
+    "description": "Build an algorithm to detect conflicts in a sliding window setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=7 => Output: 8"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB007",
+    "title": "Practice Heaps Problem 7",
+    "description": "Build an algorithm to minimize operations in a heaps setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=1 => Output: 9"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB008",
+    "title": "Practice Strings Problem 8",
+    "description": "Build an algorithm to evaluate expressions in a strings setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=4 => Output: 11",
+      "Example 2: Input: data=[...], q=4 => Output: 13"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB009",
+    "title": "Practice Queues Problem 9",
+    "description": "Build an algorithm to compute total contribution in a queues setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=3 => Output: 11"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB010",
+    "title": "Practice Search Problem 10",
+    "description": "Build an algorithm to find optimal split in a search setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=4 => Output: 12"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB011",
+    "title": "Practice Trees Problem 11",
+    "description": "Build an algorithm to count valid patterns in a trees setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=5 => Output: 13"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB012",
+    "title": "Practice Bit manipulation Problem 12",
+    "description": "Build an algorithm to simulate process in a bit manipulation setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=3 => Output: 15",
+      "Example 2: Input: data=[...], q=2 => Output: 17"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB013",
+    "title": "Practice Two pointers Problem 13",
+    "description": "Build an algorithm to rearrange values in a two pointers setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=7 => Output: 15"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB014",
+    "title": "Practice Recursion Problem 14",
+    "description": "Build an algorithm to maximize score in a recursion setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=1 => Output: 16"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB015",
+    "title": "Practice Linked lists Problem 15",
+    "description": "Build an algorithm to track running state in a linked lists setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=2 => Output: 17"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB016",
+    "title": "Practice Hash maps Problem 16",
+    "description": "Build an algorithm to detect conflicts in a hash maps setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=2 => Output: 19",
+      "Example 2: Input: data=[...], q=6 => Output: 21"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB017",
+    "title": "Practice Greedy Problem 17",
+    "description": "Build an algorithm to minimize operations in a greedy setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=4 => Output: 19"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB018",
+    "title": "Practice Graphs Problem 18",
+    "description": "Build an algorithm to evaluate expressions in a graphs setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=5 => Output: 20"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB019",
+    "title": "Practice Prefix sums Problem 19",
+    "description": "Build an algorithm to compute total contribution in a prefix sums setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=6 => Output: 21"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB020",
+    "title": "Practice Binary search Problem 20",
+    "description": "Build an algorithm to find optimal split in a binary search setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=1 => Output: 23",
+      "Example 2: Input: data=[...], q=4 => Output: 25"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB021",
+    "title": "Practice Arrays Problem 21",
+    "description": "Build an algorithm to count valid patterns in a arrays setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=1 => Output: 23"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB022",
+    "title": "Practice Stacks Problem 22",
+    "description": "Build an algorithm to simulate process in a stacks setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=2 => Output: 24"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB023",
+    "title": "Practice Sorting Problem 23",
+    "description": "Build an algorithm to rearrange values in a sorting setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=3 => Output: 25"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB024",
+    "title": "Practice Dynamic programming Problem 24",
+    "description": "Build an algorithm to maximize score in a dynamic programming setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=5 => Output: 27",
+      "Example 2: Input: data=[...], q=2 => Output: 29"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB025",
+    "title": "Practice Number theory Problem 25",
+    "description": "Build an algorithm to track running state in a number theory setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=5 => Output: 27"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB026",
+    "title": "Practice Sliding window Problem 26",
+    "description": "Build an algorithm to detect conflicts in a sliding window setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=6 => Output: 28"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB027",
+    "title": "Practice Heaps Problem 27",
+    "description": "Build an algorithm to minimize operations in a heaps setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=7 => Output: 29"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB028",
+    "title": "Practice Strings Problem 28",
+    "description": "Build an algorithm to evaluate expressions in a strings setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=4 => Output: 31",
+      "Example 2: Input: data=[...], q=6 => Output: 33"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB029",
+    "title": "Practice Queues Problem 29",
+    "description": "Build an algorithm to compute total contribution in a queues setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=2 => Output: 31"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB030",
+    "title": "Practice Search Problem 30",
+    "description": "Build an algorithm to find optimal split in a search setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=3 => Output: 32"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB031",
+    "title": "Practice Trees Problem 31",
+    "description": "Build an algorithm to count valid patterns in a trees setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=4 => Output: 33"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB032",
+    "title": "Practice Bit manipulation Problem 32",
+    "description": "Build an algorithm to simulate process in a bit manipulation setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=3 => Output: 35",
+      "Example 2: Input: data=[...], q=4 => Output: 37"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB033",
+    "title": "Practice Two pointers Problem 33",
+    "description": "Build an algorithm to rearrange values in a two pointers setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=6 => Output: 35"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB034",
+    "title": "Practice Recursion Problem 34",
+    "description": "Build an algorithm to maximize score in a recursion setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=7 => Output: 36"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB035",
+    "title": "Practice Linked lists Problem 35",
+    "description": "Build an algorithm to track running state in a linked lists setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=1 => Output: 37"
+    ],
+    "constraints": "1 <= n <= 1e3; O(n log n) or better expected for large cases",
+    "difficulty": "easy",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB036",
+    "title": "Practice Hash maps Problem 36",
+    "description": "Build an algorithm to detect conflicts in a hash maps setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=2 => Output: 39",
+      "Example 2: Input: data=[...], q=2 => Output: 41"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB037",
+    "title": "Practice Greedy Problem 37",
+    "description": "Build an algorithm to minimize operations in a greedy setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=3 => Output: 39"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB038",
+    "title": "Practice Graphs Problem 38",
+    "description": "Build an algorithm to evaluate expressions in a graphs setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=4 => Output: 40"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB039",
+    "title": "Practice Prefix sums Problem 39",
+    "description": "Build an algorithm to compute total contribution in a prefix sums setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=5 => Output: 41"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB040",
+    "title": "Practice Binary search Problem 40",
+    "description": "Build an algorithm to find optimal split in a binary search setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=1 => Output: 43",
+      "Example 2: Input: data=[...], q=6 => Output: 45"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB041",
+    "title": "Practice Arrays Problem 41",
+    "description": "Build an algorithm to count valid patterns in a arrays setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=7 => Output: 43"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB042",
+    "title": "Practice Stacks Problem 42",
+    "description": "Build an algorithm to simulate process in a stacks setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=1 => Output: 44"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB043",
+    "title": "Practice Sorting Problem 43",
+    "description": "Build an algorithm to rearrange values in a sorting setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=2 => Output: 45"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB044",
+    "title": "Practice Dynamic programming Problem 44",
+    "description": "Build an algorithm to maximize score in a dynamic programming setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=5 => Output: 47",
+      "Example 2: Input: data=[...], q=4 => Output: 49"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB045",
+    "title": "Practice Number theory Problem 45",
+    "description": "Build an algorithm to track running state in a number theory setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=4 => Output: 47"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB046",
+    "title": "Practice Sliding window Problem 46",
+    "description": "Build an algorithm to detect conflicts in a sliding window setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=5 => Output: 48"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB047",
+    "title": "Practice Heaps Problem 47",
+    "description": "Build an algorithm to minimize operations in a heaps setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=6 => Output: 49"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB048",
+    "title": "Practice Strings Problem 48",
+    "description": "Build an algorithm to evaluate expressions in a strings setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=4 => Output: 51",
+      "Example 2: Input: data=[...], q=2 => Output: 53"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB049",
+    "title": "Practice Queues Problem 49",
+    "description": "Build an algorithm to compute total contribution in a queues setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=1 => Output: 51"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB050",
+    "title": "Practice Search Problem 50",
+    "description": "Build an algorithm to find optimal split in a search setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=2 => Output: 52"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB051",
+    "title": "Practice Trees Problem 51",
+    "description": "Build an algorithm to count valid patterns in a trees setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=3 => Output: 53"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB052",
+    "title": "Practice Bit manipulation Problem 52",
+    "description": "Build an algorithm to simulate process in a bit manipulation setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=3 => Output: 55",
+      "Example 2: Input: data=[...], q=6 => Output: 57"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB053",
+    "title": "Practice Two pointers Problem 53",
+    "description": "Build an algorithm to rearrange values in a two pointers setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=5 => Output: 55"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB054",
+    "title": "Practice Recursion Problem 54",
+    "description": "Build an algorithm to maximize score in a recursion setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=6 => Output: 56"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB055",
+    "title": "Practice Linked lists Problem 55",
+    "description": "Build an algorithm to track running state in a linked lists setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=7 => Output: 57"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB056",
+    "title": "Practice Hash maps Problem 56",
+    "description": "Build an algorithm to detect conflicts in a hash maps setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=2 => Output: 59",
+      "Example 2: Input: data=[...], q=4 => Output: 61"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB057",
+    "title": "Practice Greedy Problem 57",
+    "description": "Build an algorithm to minimize operations in a greedy setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=2 => Output: 59"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB058",
+    "title": "Practice Graphs Problem 58",
+    "description": "Build an algorithm to evaluate expressions in a graphs setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=3 => Output: 60"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB059",
+    "title": "Practice Prefix sums Problem 59",
+    "description": "Build an algorithm to compute total contribution in a prefix sums setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=4 => Output: 61"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB060",
+    "title": "Practice Binary search Problem 60",
+    "description": "Build an algorithm to find optimal split in a binary search setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=1 => Output: 63",
+      "Example 2: Input: data=[...], q=2 => Output: 65"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB061",
+    "title": "Practice Arrays Problem 61",
+    "description": "Build an algorithm to count valid patterns in a arrays setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=6 => Output: 63"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB062",
+    "title": "Practice Stacks Problem 62",
+    "description": "Build an algorithm to simulate process in a stacks setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=7 => Output: 64"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB063",
+    "title": "Practice Sorting Problem 63",
+    "description": "Build an algorithm to rearrange values in a sorting setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=1 => Output: 65"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB064",
+    "title": "Practice Dynamic programming Problem 64",
+    "description": "Build an algorithm to maximize score in a dynamic programming setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=5 => Output: 67",
+      "Example 2: Input: data=[...], q=6 => Output: 69"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB065",
+    "title": "Practice Number theory Problem 65",
+    "description": "Build an algorithm to track running state in a number theory setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=3 => Output: 67"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB066",
+    "title": "Practice Sliding window Problem 66",
+    "description": "Build an algorithm to detect conflicts in a sliding window setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=4 => Output: 68"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB067",
+    "title": "Practice Heaps Problem 67",
+    "description": "Build an algorithm to minimize operations in a heaps setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=5 => Output: 69"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB068",
+    "title": "Practice Strings Problem 68",
+    "description": "Build an algorithm to evaluate expressions in a strings setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=4 => Output: 71",
+      "Example 2: Input: data=[...], q=4 => Output: 73"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB069",
+    "title": "Practice Queues Problem 69",
+    "description": "Build an algorithm to compute total contribution in a queues setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=7 => Output: 71"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB070",
+    "title": "Practice Search Problem 70",
+    "description": "Build an algorithm to find optimal split in a search setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=1 => Output: 72"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB071",
+    "title": "Practice Trees Problem 71",
+    "description": "Build an algorithm to count valid patterns in a trees setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=2 => Output: 73"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB072",
+    "title": "Practice Bit manipulation Problem 72",
+    "description": "Build an algorithm to simulate process in a bit manipulation setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=3 => Output: 75",
+      "Example 2: Input: data=[...], q=2 => Output: 77"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB073",
+    "title": "Practice Two pointers Problem 73",
+    "description": "Build an algorithm to rearrange values in a two pointers setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=4 => Output: 75"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB074",
+    "title": "Practice Recursion Problem 74",
+    "description": "Build an algorithm to maximize score in a recursion setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=5 => Output: 76"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "codechef",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB075",
+    "title": "Practice Linked lists Problem 75",
+    "description": "Build an algorithm to track running state in a linked lists setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=6 => Output: 77"
+    ],
+    "constraints": "1 <= n <= 1e5; O(n log n) or better expected for large cases",
+    "difficulty": "medium",
+    "source": "leetcode",
+    "timeLimit": "2 sec"
+  },
+  {
+    "id": "PB076",
+    "title": "Practice Hash maps Problem 76",
+    "description": "Build an algorithm to detect conflicts in a hash maps setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=2 => Output: 79",
+      "Example 2: Input: data=[...], q=6 => Output: 81"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "codechef",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB077",
+    "title": "Practice Greedy Problem 77",
+    "description": "Build an algorithm to minimize operations in a greedy setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=1 => Output: 79"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "leetcode",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB078",
+    "title": "Practice Graphs Problem 78",
+    "description": "Build an algorithm to evaluate expressions in a graphs setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=2 => Output: 80"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "codechef",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB079",
+    "title": "Practice Prefix sums Problem 79",
+    "description": "Build an algorithm to compute total contribution in a prefix sums setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=3 => Output: 81"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "leetcode",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB080",
+    "title": "Practice Binary search Problem 80",
+    "description": "Build an algorithm to find optimal split in a binary search setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=1 => Output: 83",
+      "Example 2: Input: data=[...], q=4 => Output: 85"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "codechef",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB081",
+    "title": "Practice Arrays Problem 81",
+    "description": "Build an algorithm to count valid patterns in a arrays setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=5 => Output: 83"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "leetcode",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB082",
+    "title": "Practice Stacks Problem 82",
+    "description": "Build an algorithm to simulate process in a stacks setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=6 => Output: 84"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "codechef",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB083",
+    "title": "Practice Sorting Problem 83",
+    "description": "Build an algorithm to rearrange values in a sorting setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=7 => Output: 85"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "leetcode",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB084",
+    "title": "Practice Dynamic programming Problem 84",
+    "description": "Build an algorithm to maximize score in a dynamic programming setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=5 => Output: 87",
+      "Example 2: Input: data=[...], q=2 => Output: 89"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "codechef",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB085",
+    "title": "Practice Number theory Problem 85",
+    "description": "Build an algorithm to track running state in a number theory setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=2 => Output: 87"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "leetcode",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB086",
+    "title": "Practice Sliding window Problem 86",
+    "description": "Build an algorithm to detect conflicts in a sliding window setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=3 => Output: 88"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "codechef",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB087",
+    "title": "Practice Heaps Problem 87",
+    "description": "Build an algorithm to minimize operations in a heaps setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=4 => Output: 89"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "leetcode",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB088",
+    "title": "Practice Strings Problem 88",
+    "description": "Build an algorithm to evaluate expressions in a strings setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=4 => Output: 91",
+      "Example 2: Input: data=[...], q=6 => Output: 93"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "codechef",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB089",
+    "title": "Practice Queues Problem 89",
+    "description": "Build an algorithm to compute total contribution in a queues setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=6 => Output: 91"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "leetcode",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB090",
+    "title": "Practice Search Problem 90",
+    "description": "Build an algorithm to find optimal split in a search setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=7 => Output: 92"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "codechef",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB091",
+    "title": "Practice Trees Problem 91",
+    "description": "Build an algorithm to count valid patterns in a trees setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=1 => Output: 93"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "leetcode",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB092",
+    "title": "Practice Bit manipulation Problem 92",
+    "description": "Build an algorithm to simulate process in a bit manipulation setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=3 => Output: 95",
+      "Example 2: Input: data=[...], q=4 => Output: 97"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "codechef",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB093",
+    "title": "Practice Two pointers Problem 93",
+    "description": "Build an algorithm to rearrange values in a two pointers setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=3 => Output: 95"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "leetcode",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB094",
+    "title": "Practice Recursion Problem 94",
+    "description": "Build an algorithm to maximize score in a recursion setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=4 => Output: 96"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "codechef",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB095",
+    "title": "Practice Linked lists Problem 95",
+    "description": "Build an algorithm to track running state in a linked lists setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=5 => Output: 97"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "leetcode",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB096",
+    "title": "Practice Hash maps Problem 96",
+    "description": "Build an algorithm to detect conflicts in a hash maps setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=2 => Output: 99",
+      "Example 2: Input: data=[...], q=2 => Output: 101"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "codechef",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB097",
+    "title": "Practice Greedy Problem 97",
+    "description": "Build an algorithm to minimize operations in a greedy setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=7 => Output: 99"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "leetcode",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB098",
+    "title": "Practice Graphs Problem 98",
+    "description": "Build an algorithm to evaluate expressions in a graphs setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=1 => Output: 100"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "codechef",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB099",
+    "title": "Practice Prefix sums Problem 99",
+    "description": "Build an algorithm to compute total contribution in a prefix sums setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example: Input: data=[...], q=2 => Output: 101"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "leetcode",
+    "timeLimit": "1 sec"
+  },
+  {
+    "id": "PB100",
+    "title": "Practice Binary search Problem 100",
+    "description": "Build an algorithm to find optimal split in a binary search setting. Return the final value exactly as described in the prompt.",
+    "examples": [
+      "Example 1: Input: data=[...], q=1 => Output: 103",
+      "Example 2: Input: data=[...], q=6 => Output: 105"
+    ],
+    "constraints": "1 <= n <= 3e5; O(n log n) or better expected for large cases",
+    "difficulty": "hard",
+    "source": "codechef",
+    "timeLimit": "1 sec"
+  }
+]

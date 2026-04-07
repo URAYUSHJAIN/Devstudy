@@ -1,5 +1,9 @@
 import Parser from 'rss-parser';
 
+type MediumItem = Parser.Item & {
+  'content:encoded'?: string;
+};
+
 export interface BlogPost {
   title: string;
   link: string;
@@ -36,7 +40,8 @@ function toAbsoluteUrl(value?: string): string | null {
 }
 
 function resolveMediumLink(item: Parser.Item): string | null {
-  const content = item['content:encoded'] || item.content || '';
+  const mediumItem = item as MediumItem;
+  const content = mediumItem['content:encoded'] || item.content || '';
   const canonicalMatch = content.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["']/i);
   const hrefMatch = content.match(/<a[^>]+href=["']([^"']+)["'][^>]*>/i);
 
@@ -62,8 +67,9 @@ export async function getMediumPosts(): Promise<BlogPost[]> {
   try {
     const feed = await parser.parseURL('https://medium.com/feed/@urayushjain');
     return feed.items.flatMap((item) => {
+      const mediumItem = item as MediumItem;
       // Extract first image from content
-      const content = item['content:encoded'] || item.content || '';
+      const content = mediumItem['content:encoded'] || item.content || '';
       const imgMatch = content.match(/<img[^>]+src="([^">]+)"/);
       const thumbnail = imgMatch ? imgMatch[1] : undefined;
       const link = resolveMediumLink(item);

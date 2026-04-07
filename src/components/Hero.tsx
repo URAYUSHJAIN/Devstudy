@@ -4,26 +4,27 @@ import { ArrowRight, Terminal, Code2, Cpu, Globe, Database } from 'lucide-react'
 
 const Hero = () => {
   return (
-    <section className="relative pt-16 pb-24 overflow-hidden bg-[linear-gradient(160deg,var(--c1),#f0fefe_40%,var(--c2))]">
+    <section className="relative pt-28 md:pt-32 pb-24 md:pb-28 overflow-hidden bg-[linear-gradient(160deg,var(--c1),#f0fefe_40%,var(--c2))]">
+      <div className="pointer-events-none absolute inset-x-0 top-10 h-36 bg-[radial-gradient(55%_90%_at_50%_0%,rgba(113,201,206,0.25),rgba(113,201,206,0))]" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
           
           {/* Left Content */}
           <div className="lg:col-span-6 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-(--c2) border border-(--c3) mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-(--c2) border border-(--c3) mb-7 shadow-[0_8px_18px_rgba(113,201,206,0.18)]">
               <span className="w-2 h-2 rounded-full bg-(--c4) animate-pulse-dot" />
               <span className="text-xs font-semibold text-(--ink) uppercase tracking-[0.06em]">
                 Trusted by 100K+ Engineers
               </span>
             </div>
             
-            <h1 className="text-[48px] sm:text-[48px] lg:text-[48px] font-bold text-(--ink) tracking-[-1.5px] mb-6 leading-[1.08]">
+            <h1 className="text-[40px] sm:text-[46px] lg:text-[54px] font-bold text-(--ink) tracking-[-1.8px] mb-6 leading-[1.04]">
               Build Real-World <br className="hidden lg:block" />
               <span className="text-(--c4d)">Engineering Skills</span> <br className="hidden lg:block" />
               That Actually Ship
             </h1>
             
-            <p className="text-[16px] text-(--muted) mb-8 max-w-2xl mx-auto lg:mx-0 leading-[1.65]">
+            <p className="text-[16px] sm:text-[17px] text-(--muted) mb-9 max-w-2xl mx-auto lg:mx-0 leading-[1.7]">
               Project-driven courses, system design, and AI-assisted learning for developers. 
               Stop watching tutorials. Start shipping code.
             </p>
@@ -38,7 +39,7 @@ const Hero = () => {
               </Link>
             </div>
 
-            <div className="mt-8 pt-4 border-t border-(--c3) grid grid-cols-3 gap-4 max-w-xl mx-auto lg:mx-0">
+            <div className="mt-9 pt-5 border-t border-(--c3) grid grid-cols-3 gap-4 max-w-xl mx-auto lg:mx-0">
               <div>
                 <p className="text-[28px] font-bold text-(--ink) tracking-[-1px]">100K+</p>
                 <p className="text-[12px] uppercase tracking-[0.06em] text-(--muted)">Engineers</p>
@@ -55,9 +56,9 @@ const Hero = () => {
           </div>
 
           {/* Right Content - Code Editor Mockup */}
-          <div className="lg:col-span-6 mt-16 lg:mt-0 relative animate-float">
+          <div className="lg:col-span-6 mt-14 lg:mt-2 relative animate-float">
             {/* Floating Stat Card */}
-            <div className="absolute -top-12 -right-4 z-10 bg-white/80 p-4 rounded-xl shadow-xl border border-(--c3) hidden md:block animate-fade-in-up backdrop-blur-sm">
+            <div className="absolute -top-9 -right-3 z-10 bg-white/80 p-4 rounded-xl shadow-xl border border-(--c3) hidden md:block animate-fade-in-up backdrop-blur-sm">
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-(--c2) rounded-full">
                   <Terminal className="w-5 h-5 text-(--c4d)" />

@@ -1,0 +1,568 @@
+[
+  {
+    "problemCode": "CCP001",
+    "title": "Chef and Arrays Challenge 1",
+    "difficulty": "easy",
+    "statement": "Given one or more test cases, solve a arrays task where you must count valid patterns under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=5, arr=[...], k=2 | Output: 9"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 1e3, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP002",
+    "title": "Chef and Strings Challenge 2",
+    "difficulty": "easy",
+    "statement": "Given one or more test cases, solve a strings task where you must maximize score under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=6, arr=[...], k=3 | Output: 10"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 1e3, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP003",
+    "title": "Chef and Linked lists Challenge 3",
+    "difficulty": "easy",
+    "statement": "Given one or more test cases, solve a linked lists task where you must minimize operations under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=8, arr=[...], k=4 | Output: 13",
+      "Input: n=9, arr=[...], k=5 | Output: 15"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 1e3, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP004",
+    "title": "Chef and Stacks Challenge 4",
+    "difficulty": "easy",
+    "statement": "Given one or more test cases, solve a stacks task where you must find optimal split under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=8, arr=[...], k=5 | Output: 12"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 1e3, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP005",
+    "title": "Chef and Queues Challenge 5",
+    "difficulty": "easy",
+    "statement": "Given one or more test cases, solve a queues task where you must rearrange values under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=9, arr=[...], k=6 | Output: 13"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 1e3, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP006",
+    "title": "Chef and Hash maps Challenge 6",
+    "difficulty": "easy",
+    "statement": "Given one or more test cases, solve a hash maps task where you must detect conflicts under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=11, arr=[...], k=2 | Output: 16",
+      "Input: n=6, arr=[...], k=4 | Output: 18"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 1e3, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP007",
+    "title": "Chef and Sorting Challenge 7",
+    "difficulty": "easy",
+    "statement": "Given one or more test cases, solve a sorting task where you must compute total contribution under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=11, arr=[...], k=2 | Output: 15"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 1e3, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP008",
+    "title": "Chef and Search Challenge 8",
+    "difficulty": "easy",
+    "statement": "Given one or more test cases, solve a search task where you must simulate process under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=4, arr=[...], k=3 | Output: 16"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 1e3, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP009",
+    "title": "Chef and Greedy Challenge 9",
+    "difficulty": "easy",
+    "statement": "Given one or more test cases, solve a greedy task where you must track running state under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=7, arr=[...], k=5 | Output: 19",
+      "Input: n=9, arr=[...], k=3 | Output: 21"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 1e3, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP010",
+    "title": "Chef and Dynamic programming Challenge 10",
+    "difficulty": "easy",
+    "statement": "Given one or more test cases, solve a dynamic programming task where you must evaluate expressions under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=6, arr=[...], k=5 | Output: 18"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 1e3, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP011",
+    "title": "Chef and Trees Challenge 11",
+    "difficulty": "easy",
+    "statement": "Given one or more test cases, solve a trees task where you must count valid patterns under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=7, arr=[...], k=6 | Output: 19"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 1e3, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP012",
+    "title": "Chef and Graphs Challenge 12",
+    "difficulty": "easy",
+    "statement": "Given one or more test cases, solve a graphs task where you must maximize score under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=10, arr=[...], k=3 | Output: 22",
+      "Input: n=6, arr=[...], k=2 | Output: 24"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 1e3, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP013",
+    "title": "Chef and Number theory Challenge 13",
+    "difficulty": "easy",
+    "statement": "Given one or more test cases, solve a number theory task where you must minimize operations under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=9, arr=[...], k=2 | Output: 21"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 1e3, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP014",
+    "title": "Chef and Bit manipulation Challenge 14",
+    "difficulty": "easy",
+    "statement": "Given one or more test cases, solve a bit manipulation task where you must find optimal split under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=10, arr=[...], k=3 | Output: 22"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 1e3, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP015",
+    "title": "Chef and Prefix sums Challenge 15",
+    "difficulty": "easy",
+    "statement": "Given one or more test cases, solve a prefix sums task where you must rearrange values under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=6, arr=[...], k=1 | Output: 25",
+      "Input: n=9, arr=[...], k=5 | Output: 27"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 1e3, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP016",
+    "title": "Chef and Sliding window Challenge 16",
+    "difficulty": "easy",
+    "statement": "Given one or more test cases, solve a sliding window task where you must detect conflicts under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=4, arr=[...], k=5 | Output: 24"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 1e3, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP017",
+    "title": "Chef and Two pointers Challenge 17",
+    "difficulty": "easy",
+    "statement": "Given one or more test cases, solve a two pointers task where you must compute total contribution under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=5, arr=[...], k=6 | Output: 25"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 1e3, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP018",
+    "title": "Chef and Binary search Challenge 18",
+    "difficulty": "easy",
+    "statement": "Given one or more test cases, solve a binary search task where you must simulate process under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=9, arr=[...], k=4 | Output: 28",
+      "Input: n=6, arr=[...], k=4 | Output: 30"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 1e3, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP019",
+    "title": "Chef and Heaps Challenge 19",
+    "difficulty": "easy",
+    "statement": "Given one or more test cases, solve a heaps task where you must track running state under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=7, arr=[...], k=2 | Output: 27"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 1e3, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP020",
+    "title": "Chef and Recursion Challenge 20",
+    "difficulty": "easy",
+    "statement": "Given one or more test cases, solve a recursion task where you must evaluate expressions under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=8, arr=[...], k=3 | Output: 28"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 1e3, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP021",
+    "title": "Chef and Arrays Challenge 21",
+    "difficulty": "medium",
+    "statement": "Given one or more test cases, solve a arrays task where you must count valid patterns under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=5, arr=[...], k=2 | Output: 31",
+      "Input: n=9, arr=[...], k=3 | Output: 33"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 2e5, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP022",
+    "title": "Chef and Strings Challenge 22",
+    "difficulty": "medium",
+    "statement": "Given one or more test cases, solve a strings task where you must maximize score under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=10, arr=[...], k=5 | Output: 30"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 2e5, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP023",
+    "title": "Chef and Linked lists Challenge 23",
+    "difficulty": "medium",
+    "statement": "Given one or more test cases, solve a linked lists task where you must minimize operations under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=11, arr=[...], k=6 | Output: 31"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 2e5, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP024",
+    "title": "Chef and Stacks Challenge 24",
+    "difficulty": "medium",
+    "statement": "Given one or more test cases, solve a stacks task where you must find optimal split under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=8, arr=[...], k=5 | Output: 34",
+      "Input: n=6, arr=[...], k=2 | Output: 36"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 2e5, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP025",
+    "title": "Chef and Queues Challenge 25",
+    "difficulty": "medium",
+    "statement": "Given one or more test cases, solve a queues task where you must rearrange values under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=5, arr=[...], k=2 | Output: 33"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 2e5, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP026",
+    "title": "Chef and Hash maps Challenge 26",
+    "difficulty": "medium",
+    "statement": "Given one or more test cases, solve a hash maps task where you must detect conflicts under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=6, arr=[...], k=3 | Output: 34"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 2e5, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP027",
+    "title": "Chef and Sorting Challenge 27",
+    "difficulty": "medium",
+    "statement": "Given one or more test cases, solve a sorting task where you must compute total contribution under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=11, arr=[...], k=3 | Output: 37",
+      "Input: n=9, arr=[...], k=5 | Output: 39"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 2e5, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP028",
+    "title": "Chef and Search Challenge 28",
+    "difficulty": "medium",
+    "statement": "Given one or more test cases, solve a search task where you must simulate process under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=8, arr=[...], k=5 | Output: 36"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 2e5, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP029",
+    "title": "Chef and Greedy Challenge 29",
+    "difficulty": "medium",
+    "statement": "Given one or more test cases, solve a greedy task where you must track running state under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=9, arr=[...], k=6 | Output: 37"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 2e5, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP030",
+    "title": "Chef and Dynamic programming Challenge 30",
+    "difficulty": "medium",
+    "statement": "Given one or more test cases, solve a dynamic programming task where you must evaluate expressions under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=7, arr=[...], k=1 | Output: 40",
+      "Input: n=6, arr=[...], k=4 | Output: 42"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 2e5, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP031",
+    "title": "Chef and Trees Challenge 31",
+    "difficulty": "medium",
+    "statement": "Given one or more test cases, solve a trees task where you must count valid patterns under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=11, arr=[...], k=2 | Output: 39"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 2e5, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP032",
+    "title": "Chef and Graphs Challenge 32",
+    "difficulty": "medium",
+    "statement": "Given one or more test cases, solve a graphs task where you must maximize score under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=4, arr=[...], k=3 | Output: 40"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 2e5, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP033",
+    "title": "Chef and Number theory Challenge 33",
+    "difficulty": "medium",
+    "statement": "Given one or more test cases, solve a number theory task where you must minimize operations under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=10, arr=[...], k=4 | Output: 43",
+      "Input: n=9, arr=[...], k=3 | Output: 45"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 2e5, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP034",
+    "title": "Chef and Bit manipulation Challenge 34",
+    "difficulty": "medium",
+    "statement": "Given one or more test cases, solve a bit manipulation task where you must find optimal split under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=6, arr=[...], k=5 | Output: 42"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 2e5, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP035",
+    "title": "Chef and Prefix sums Challenge 35",
+    "difficulty": "medium",
+    "statement": "Given one or more test cases, solve a prefix sums task where you must rearrange values under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=7, arr=[...], k=6 | Output: 43"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 2e5, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP036",
+    "title": "Chef and Sliding window Challenge 36",
+    "difficulty": "medium",
+    "statement": "Given one or more test cases, solve a sliding window task where you must detect conflicts under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=6, arr=[...], k=2 | Output: 46",
+      "Input: n=6, arr=[...], k=2 | Output: 48"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 2e5, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP037",
+    "title": "Chef and Two pointers Challenge 37",
+    "difficulty": "medium",
+    "statement": "Given one or more test cases, solve a two pointers task where you must compute total contribution under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=9, arr=[...], k=2 | Output: 45"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 2e5, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP038",
+    "title": "Chef and Binary search Challenge 38",
+    "difficulty": "medium",
+    "statement": "Given one or more test cases, solve a binary search task where you must simulate process under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=10, arr=[...], k=3 | Output: 46"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 2e5, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP039",
+    "title": "Chef and Heaps Challenge 39",
+    "difficulty": "medium",
+    "statement": "Given one or more test cases, solve a heaps task where you must track running state under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=9, arr=[...], k=5 | Output: 49",
+      "Input: n=9, arr=[...], k=5 | Output: 51"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 2e5, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP040",
+    "title": "Chef and Recursion Challenge 40",
+    "difficulty": "medium",
+    "statement": "Given one or more test cases, solve a recursion task where you must evaluate expressions under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=4, arr=[...], k=5 | Output: 48"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 2e5, values in range [-1e9, 1e9]",
+    "timeLimit": "2 sec"
+  },
+  {
+    "problemCode": "CCP041",
+    "title": "Chef and Arrays Challenge 41",
+    "difficulty": "hard",
+    "statement": "Given one or more test cases, solve a arrays task where you must count valid patterns under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=5, arr=[...], k=6 | Output: 49"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 5e5, values in range [-1e9, 1e9]",
+    "timeLimit": "1 sec"
+  },
+  {
+    "problemCode": "CCP042",
+    "title": "Chef and Strings Challenge 42",
+    "difficulty": "hard",
+    "statement": "Given one or more test cases, solve a strings task where you must maximize score under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=5, arr=[...], k=3 | Output: 52",
+      "Input: n=6, arr=[...], k=4 | Output: 54"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 5e5, values in range [-1e9, 1e9]",
+    "timeLimit": "1 sec"
+  },
+  {
+    "problemCode": "CCP043",
+    "title": "Chef and Linked lists Challenge 43",
+    "difficulty": "hard",
+    "statement": "Given one or more test cases, solve a linked lists task where you must minimize operations under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=7, arr=[...], k=2 | Output: 51"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 5e5, values in range [-1e9, 1e9]",
+    "timeLimit": "1 sec"
+  },
+  {
+    "problemCode": "CCP044",
+    "title": "Chef and Stacks Challenge 44",
+    "difficulty": "hard",
+    "statement": "Given one or more test cases, solve a stacks task where you must find optimal split under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=8, arr=[...], k=3 | Output: 52"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 5e5, values in range [-1e9, 1e9]",
+    "timeLimit": "1 sec"
+  },
+  {
+    "problemCode": "CCP045",
+    "title": "Chef and Queues Challenge 45",
+    "difficulty": "hard",
+    "statement": "Given one or more test cases, solve a queues task where you must rearrange values under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=8, arr=[...], k=1 | Output: 55",
+      "Input: n=9, arr=[...], k=3 | Output: 57"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 5e5, values in range [-1e9, 1e9]",
+    "timeLimit": "1 sec"
+  },
+  {
+    "problemCode": "CCP046",
+    "title": "Chef and Hash maps Challenge 46",
+    "difficulty": "hard",
+    "statement": "Given one or more test cases, solve a hash maps task where you must detect conflicts under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=10, arr=[...], k=5 | Output: 54"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 5e5, values in range [-1e9, 1e9]",
+    "timeLimit": "1 sec"
+  },
+  {
+    "problemCode": "CCP047",
+    "title": "Chef and Sorting Challenge 47",
+    "difficulty": "hard",
+    "statement": "Given one or more test cases, solve a sorting task where you must compute total contribution under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=11, arr=[...], k=6 | Output: 55"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 5e5, values in range [-1e9, 1e9]",
+    "timeLimit": "1 sec"
+  },
+  {
+    "problemCode": "CCP048",
+    "title": "Chef and Search Challenge 48",
+    "difficulty": "hard",
+    "statement": "Given one or more test cases, solve a search task where you must simulate process under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=11, arr=[...], k=4 | Output: 58",
+      "Input: n=6, arr=[...], k=2 | Output: 60"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 5e5, values in range [-1e9, 1e9]",
+    "timeLimit": "1 sec"
+  },
+  {
+    "problemCode": "CCP049",
+    "title": "Chef and Greedy Challenge 49",
+    "difficulty": "hard",
+    "statement": "Given one or more test cases, solve a greedy task where you must track running state under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=5, arr=[...], k=2 | Output: 57"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 5e5, values in range [-1e9, 1e9]",
+    "timeLimit": "1 sec"
+  },
+  {
+    "problemCode": "CCP050",
+    "title": "Chef and Dynamic programming Challenge 50",
+    "difficulty": "hard",
+    "statement": "Given one or more test cases, solve a dynamic programming task where you must evaluate expressions under strict limits. Output the required answer for each case.",
+    "examples": [
+      "Input: n=6, arr=[...], k=3 | Output: 58"
+    ],
+    "constraints": "1 <= T <= 1e4, 1 <= N <= 5e5, values in range [-1e9, 1e9]",
+    "timeLimit": "1 sec"
+  }
+]

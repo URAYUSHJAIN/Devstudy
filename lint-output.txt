@@ -1,0 +1,107 @@
+
+> my-app@0.1.0 lint
+> eslint
+
+
+C:\Users\urayu\OneDrive\Desktop\update's\Devstudy\src\app\api\code\execute\route.ts
+  38:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\urayu\OneDrive\Desktop\update's\Devstudy\src\app\api\github\sync\route.ts
+  31:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\urayu\OneDrive\Desktop\update's\Devstudy\src\app\courses\[slug]\page.tsx
+  5:21  warning  'Calendar' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\urayu\OneDrive\Desktop\update's\Devstudy\src\app\not-found.tsx
+  15:29  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  15:50  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\urayu\OneDrive\Desktop\update's\Devstudy\src\app\profile\page.tsx
+    6:24  warning  'GitFork' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+    6:33  warning  'BookOpen' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @typescript-eslint/no-unused-vars
+   46:42  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            @typescript-eslint/no-explicit-any
+  106:44  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\urayu\OneDrive\Desktop\update's\Devstudy\src\app\profile\page.tsx:106:44
+  104 |                       <div
+  105 |                         className="bg-indigo-600 h-2 rounded-full"
+> 106 |                         style={{ width: `${Math.random() * 100}%` }} // Mock progress
+      |                                            ^^^^^^^^^^^^^ Cannot call impure function
+  107 |                       />
+  108 |                     </div>
+  109 |                   </Link>  react-hooks/purity
+
+C:\Users\urayu\OneDrive\Desktop\update's\Devstudy\src\app\search\page.tsx
+   4:28  warning  'Clock' is defined but never used                                @typescript-eslint/no-unused-vars
+  26:54  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  26:62  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\urayu\OneDrive\Desktop\update's\Devstudy\src\components\BattleArena.tsx
+  321:7  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\urayu\OneDrive\Desktop\update's\Devstudy\src\components\BattleArena.tsx:321:7
+  319 |   useEffect(() => {
+  320 |     if (sessionStatus !== 'loading') {
+> 321 |       setSessionWaitExpired(false);
+      |       ^^^^^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  322 |       return;
+  323 |     }
+  324 |  react-hooks/set-state-in-effect
+
+C:\Users\urayu\OneDrive\Desktop\update's\Devstudy\src\components\Categories.tsx
+  20:15  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  35:26  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  35:38  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  49:20  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\urayu\OneDrive\Desktop\update's\Devstudy\src\components\CodeEditor.tsx
+  249:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\urayu\OneDrive\Desktop\update's\Devstudy\src\components\Footer.tsx
+  34:19  error  Do not use an `<a>` element to navigate to `/courses/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+
+C:\Users\urayu\OneDrive\Desktop\update's\Devstudy\src\components\Hero.tsx
+    3:32   warning  'Code2' is defined but never used                                       @typescript-eslint/no-unused-vars
+    3:39   warning  'Cpu' is defined but never used                                         @typescript-eslint/no-unused-vars
+    3:44   warning  'Globe' is defined but never used                                       @typescript-eslint/no-unused-vars
+    3:51   warning  'Database' is defined but never used                                    @typescript-eslint/no-unused-vars
+   88:190  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`         react/no-unescaped-entities
+   88:195  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`         react/no-unescaped-entities
+   97:123  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`         react/no-unescaped-entities
+   97:127  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`         react/no-unescaped-entities
+   98:90   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+   99:206  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`         react/no-unescaped-entities
+   99:217  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`         react/no-unescaped-entities
+  102:144  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`         react/no-unescaped-entities
+  102:150  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`         react/no-unescaped-entities
+  102:194  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`         react/no-unescaped-entities
+  102:198  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`         react/no-unescaped-entities
+
+C:\Users\urayu\OneDrive\Desktop\update's\Devstudy\src\components\MermaidEditor.tsx
+  195:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\urayu\OneDrive\Desktop\update's\Devstudy\src\components\RoadmapCard.tsx
+  23:3  error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+
+C:\Users\urayu\OneDrive\Desktop\update's\Devstudy\src\lib\auth.ts
+  21:9  error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  23:9  error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+
+C:\Users\urayu\OneDrive\Desktop\update's\Devstudy\src\lib\github.ts
+  12:19  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  50:12  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+  91:25  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\urayu\OneDrive\Desktop\update's\Devstudy\src\types\next-auth.d.ts
+  1:8  warning  'NextAuth' is defined but never used  @typescript-eslint/no-unused-vars
+
+Γ£û 42 problems (31 errors, 11 warnings)
+

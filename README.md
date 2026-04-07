@@ -74,6 +74,35 @@ The **Mermaid Editor** leverages the client-side rendering capabilities of Merma
 4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
 
+## Deployment Notes (GitHub Auth + Live Battle)
+
+### 1. Required environment variables (web app)
+
+- `GITHUB_ID` and `GITHUB_SECRET` for NextAuth GitHub login
+- `NEXTAUTH_SECRET` for session encryption
+- `NEXTAUTH_URL` set to your deployed web URL (example: `https://your-app.com`)
+- `NEXT_PUBLIC_SOCKET_URL` set to the deployed socket server URL
+  - local example: `http://localhost:3001`
+  - production example: `https://battle.your-app.com`
+
+### 2. Socket server deployment
+
+Run the battle socket server as a separate long-running process:
+
+```bash
+npm run socket
+```
+
+Set this on the socket server environment:
+
+- `CLIENT_ORIGIN` = your web app origin (example: `https://your-app.com`)
+
+### 3. Battle mode behavior
+
+- Battle page requires GitHub sign-in.
+- Lobby now shows who is available to fight in real-time.
+- Matchmaking uses queue by mode and rating range.
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.

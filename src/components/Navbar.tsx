@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Github, Search, Menu, X, User } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
@@ -11,8 +11,19 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
+
+  useEffect(() => {
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > 16);
+    };
+
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,6 +38,8 @@ const Navbar = () => {
     { name: 'Courses', href: '/courses' },
     { name: 'Roadmaps', href: '/roadmaps' },
     { name: 'Labs', href: '/labs' },
+    { name: 'Battle', href: '/labs/battle' },
+    { name: 'Dashboard', href: '/dashboard' },
     { name: 'System Design', href: '/system-design' },
     { name: 'Blog', href: '/blog' },
   ];
@@ -34,12 +47,12 @@ const Navbar = () => {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-(--c1)/90 backdrop-blur-md border-b border-(--c3)">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <nav className={`fixed left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1rem)] md:w-[min(1120px,calc(100%-2rem))] rounded-2xl border border-(--c3) bg-(--c1)/92 backdrop-blur-xl transition-[top,box-shadow,background-color] duration-200 ${isScrolled ? 'top-1.5 shadow-[0_10px_26px_rgba(13,43,44,0.16)]' : 'top-3 shadow-[0_14px_36px_rgba(13,43,44,0.14)]'}`}>
+      <div className="px-4 sm:px-6 lg:px-8">
+        <div className={`grid grid-cols-[1fr_auto] md:grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 transition-[height] duration-200 ${isScrolled ? 'h-14' : 'h-16'}`}>
           {/* Logo */}
-          <div className="shrink-0 flex items-center">
-            <Link href="/" className="text-xl font-bold tracking-[-1px] text-(--ink) font-mono flex items-center gap-2">
+          <div className="shrink-0 flex items-center justify-self-start">
+            <Link href="/" className="text-xl font-bold tracking-[-1px] text-(--ink) font-mono flex items-center gap-2 whitespace-nowrap">
               <div className="w-8 h-8 bg-(--ink) rounded-lg flex items-center justify-center text-(--c1)">
                 &lt;/&gt;
               </div>
@@ -48,24 +61,26 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`px-3 py-2 text-sm font-medium rounded-lg transition-all duration-150 ${
-                  isActive(item.href)
-                    ? 'text-(--ink) bg-(--c2)'
-                    : 'text-(--muted) hover:text-(--ink) hover:bg-(--c2)'
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+          <div className="hidden md:flex items-center justify-center px-2">
+            <div className="mx-auto flex items-center justify-center gap-1">
+              {navLinks.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`inline-flex justify-center px-3 py-2 text-sm font-medium rounded-xl whitespace-nowrap transition-all duration-150 ${
+                    isActive(item.href)
+                      ? 'text-(--ink) bg-(--c2)'
+                      : 'text-(--muted) hover:text-(--ink) hover:bg-(--c2)'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* Right Side Actions */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center justify-self-end justify-end gap-2">
             {isSearchOpen ? (
               <form onSubmit={handleSearch} className="relative">
                 <input
@@ -130,7 +145,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-(--c1) border-b border-(--c3)">
+        <div className="md:hidden bg-(--c1) border-t border-(--c3) rounded-b-2xl">
           <div className="px-4 pt-4 pb-8 space-y-4 sm:px-4">
             {navLinks.map((item) => (
               <Link
